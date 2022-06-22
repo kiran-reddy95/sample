@@ -1,10 +1,16 @@
 node {
 	stage('checkout'){
 	echo "git checkout stage"
+	git branch: 'main', url: 'https://github.com/kiran-reddy95/sample.git'
 	}
 
 	stage('Bazel Build'){
 	echo "From Bazel Build Stage"
+	sh '''
+	ls
+	cd cpp-tutorial/stage2
+	bazel build //main:hello-world
+	'''
 	}
 }
 
