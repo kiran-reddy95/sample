@@ -1,0 +1,13 @@
+node {
+	stage('Check-In'){
+	echo "We are the Check-In Stage"
+	}
+
+	stage('Checkout'){
+	echo "we are in ceckout stage"
+	}
+
+	stage('Bazel Buils'){
+	echo "We are in Build Stage"
+	}
+}
